@@ -1,0 +1,23 @@
+namespace Lab3_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] A = new int[54];
+            Random rand = new Random();
+            for (int i = 0; i < A.Length; i++)
+                A[i] = rand.Next(0,54);
+
+            ArrayList number = new ArrayList();            
+            foreach (int num in A)
+            {
+                if ((A.Contains(num)) && (!number.Contains(num))) 
+                { number.Add(num); 
+                Console.WriteLine(" " + num); }                     
+            }
+
+            Console.WriteLine("Кiлькiсть рiзних чисел у масивi: " + number.Count);
+        }
+            }
+        }
